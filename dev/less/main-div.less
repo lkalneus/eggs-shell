@@ -1,0 +1,109 @@
+.main {
+    width: calc(100% - 595px);
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    .filters-text {
+        
+        font-family: OpenSans;
+        font-size: 20px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.35;
+        letter-spacing: normal;
+        color: #000000;
+        
+    }
+    
+    .selected {
+        font-weight: 600;
+    }
+
+}
+.table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    
+    .table-row-heading{
+        height: 48px;
+    }
+    .table-row {
+        height: 64px;
+        border-top: 1px solid #f5f5f5;
+    }
+    .table-heading {
+        font-family: OpenSans;
+        font-size: 14px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.36;
+        letter-spacing: normal;
+        color: #3c3c3c;
+        
+    }
+    .avatar {
+        width: 32px;
+        height: 32px;
+        padding-left: 45px;
+    }
+    .name {
+        
+        font-family: OpenSans;
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+    }
+    .type {
+        
+        font-family: OpenSans;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+    }
+    .location {
+        font-family: OpenSans;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+    }
+    .remove {
+        width: 12px;
+        height: 16px;
+        padding-right: 40px;
+    }
+    .remove-img {
+        width: 13px;
+        height: 16px;
+        background-image: url("../../assets/material-delete.svg");
+        background-repeat: no-repeat;
+    }
+    .selected {
+        box-shadow: 0 0 16px 0 rgba(42, 125, 206, 0.16);
+        background-color: #eff9ff;
+
+        .remove-img {
+            background-image: url("../../assets/material-delete-selected.svg");
+        }
+    }
+}
