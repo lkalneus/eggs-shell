@@ -1,3 +1,7 @@
+@form-input-bg: #efefef;
+@form-input-color: #919191;
+
+
 .aside {
     display: flex;
     flex-direction: column;
@@ -112,7 +116,7 @@
         width: 272px;
         height: 32px;
         border-radius: 8px;
-        background-color: #efefef;
+        background-color: @form-input-bg;
         font-family: OpenSans;
         font-size: 18px;
         font-weight: 300;
@@ -121,11 +125,47 @@
         line-height: 1.38;
         letter-spacing: normal;
         text-align: left;
-        color: #919191;
+        color: @form-input-color;
         border: none;
         box-sizing: border-box;
         padding-left: 10px;
         margin-left: 15px;
+    }
+    .form-select {
+        width: 272px!important;
+        margin-left: 15px!important;
+        .btn {
+            background-color: @form-input-bg!important;
+            border: none!important;
+            font-size: 18px!important;
+            font-family: OpenSans!important;
+            font-style: italic;
+            color: @form-input-color!important;
+            font-weight: 300!important;
+            border-radius: 8px!important;
+            padding-top: 3.5px;
+            padding-bottom: 3.5px;
+        }
+        li {
+            font-size: 18px!important;
+        }
+        .caret {
+            border-width: 6px;
+        }
+        .bs-caret {
+            color: black;
+        }
+    }
+    .form-row {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .label-text {
+        display: inline-block;
+        width: 70px;
+        text-align: right;
     }
 
 }
