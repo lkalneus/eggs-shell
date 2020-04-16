@@ -151,6 +151,7 @@
                     <div class="form-row">
                         <label class="label-name">
                             <div class="label-text">Type:</div>
+                            <!--bootstrap select-->
                             <select class="selectpicker form-select select-type" title="Not select">
                                 <option>Farmer</option>
                                 <option>Not farmer</option>
@@ -160,6 +161,7 @@
                     <div class="form-row">
                         <label class="label-name">
                             <div class="label-text">Location:</div>
+                            <!--bootstrap select-->
                             <select class="selectpicker form-select select-location" title="Not select">
                                 <option>Sweden</option>
                                 <option>Finland</option>
@@ -175,6 +177,8 @@
 
     </div>
 </div>
-<script src="./script.js"></script>
+<script>
+    $('.my-select').selectpicker();
+</script>
 </body>
 </html>
