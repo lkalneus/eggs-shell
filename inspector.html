@@ -4,12 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="build/css/main.css">
-    <title>Document</title>
+    <title>Inspector-Dashboard</title>
 </head>
 <body>
-    <div class="wrapper">
-        <p class="title">Lalala</p>
+<div class="wrapper">
+    <header class="header header-inspector">
+        <p class="header-logo">EggsShell.com</p>
+        <p class="header-text">Inspector's Dashboard</p>
+    </header>
+    <div class="page">
+        <div class="menu menu-inspector">
+            <img class="icons-img" src="assets/feather-settings.svg">
+            <img class="icons-img" src="assets/feather-user.svg">
+            <img class="icons-img" src="assets/open-account-logout.svg">
+        </div>
+        <main class="main">
+            <div class="filters">
+                <p class="filters-text selected">All</p>
+                <p class="filters-text">To approve</p>
+                <p class="filters-text">Approved</p>
+                <p class="filters-text">Declined</p>
+            </div>
+            <table class="table">
+               <tr class="table-row-heading">
+                   <th class="table-heading">Name</th>
+                   <th class="table-heading">Species</th>
+                   <th class="table-heading">Color</th>
+                   <th class="table-heading">Date</th>
+                   <th class="table-heading">Weight(1st)</th>
+                   <th class="table-heading">Location</th>
+                </tr> 
+                <tr class="table-row">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="td-inspector">Chicken</td>
+                    <td class="td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+                <tr class="table-row table-row-decline">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="td-inspector">Chicken</td>
+                    <td class="td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+                <tr class="table-row">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="td-inspector">Chicken</td>
+                    <td class="td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+                <tr class="table-row">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="td-inspector">Chicken</td>
+                    <td class="td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+                <tr class="table-row table-row-approve">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="td-inspector">Chicken</td>
+                    <td class="td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+                <tr class="table-row">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="td-inspector">Chicken</td>
+                    <td class="td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+                <tr class="table-row">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="td-inspector">Chicken</td>
+                    <td class="td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+                <tr class="table-row">
+                    <td class="name name-inspector td-inspector">
+                        <img class="avatar-img" src="assets/logo-example-small-2.png">
+                        <span>Petro&Co</span>
+                    </td>
+                    <td class="type td-inspector">Chicken</td>
+                    <td class="location td-inspector">Brown</td>
+                    <td class="td-inspector">12.04.20</td>
+                    <td class="td-inspector">75g</td>
+                    <td class="td-inspector">Sweden</td>
+                    
+                </tr>
+            </table>
+        </main>
+        <aside class="aside aside-inspector">
+            <div class="company-name">
+                <div class="company-name-pic">
+                    <div class="company-name-logo-rectangle"></div>
+                    <img class="company-name-logo-img" src="/assets/Egg photo (1).png">
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-15">15%</div>
+                    <div class="progress-bar-85">85%</div>
+                </div> 
+                <h2 class="company-name-heading">CompanyName</h2>
+                <div class="company-name-text">
+                    <div class="text-first">Size:</div>
+                    <div class="text-second">A</div>
+                </div>
+                <div class="company-name-text">
+                    <div class="text-first">Weight(1st):</div>
+                    <div class="text-second">75 gram</div>
+                </div>
+                <div class="company-name-text">
+                    <div class="text-first">Color:</div>
+                    <div class="text-second">brown</div>
+                </div>
+                <div class="company-name-text">
+                    <div class="text-first">Country:</div>
+                    <div class="text-second">Sweden, Linköping</div>
+                </div>
+                <div class="company-name-text">
+                    <div class="text-first">Date:</div>
+                    <div class="text-second">12.04.20</div>
+                </div>
+                <div class="company-name-text">
+                    <div class="text-first">Source:</div>
+                    <div class="text-second">Chiken</div>
+                </div>
+                <div class="company-name-text">
+                    <div class="text-first">Price:</div>
+                    <div class="text-second">£10/12st</div>
+                </div>
+                <div class="company-name-button">
+                    <button class="button-decline">
+                        Decline
+                    </button>
+                    <button class="button-approve">
+                        Approve
+                    </button>
+
+                </div>
+
+
+
+            </div>
+            
+        </aside>
+
     </div>
-    <div class="catalog">Catalog</div>
+</div>
 </body>
 </html>
