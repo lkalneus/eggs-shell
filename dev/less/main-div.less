@@ -24,7 +24,6 @@
 
 }
 .table {
-    width: 100%;
     background-color: #ffffff;
     border-collapse: collapse;
     border-radius: 8px;
@@ -97,8 +96,11 @@
         text-align: center;
         color: #000000;
     }
-    .name-inspector {
-        min-width: 200px;
+    .td-inspector.name-inspector {
+        min-width: 115px;
+        @media (min-width: 1220px) {
+            min-width: 200px;
+        }
 
         .avatar-img {
             display: inline-block;

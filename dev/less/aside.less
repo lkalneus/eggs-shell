@@ -190,7 +190,7 @@
     margin-top: 55px;
 }
 .company-name {
-    width: 400px;
+    width: 350px;
     height: 560px;
     border-radius: 8px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
@@ -199,26 +199,39 @@
     flex-direction: column; 
     box-sizing: border-box;
     align-items: center;
+    padding: 6px;
 
-    .company-name-pic {
+    @media (min-width:1220px) {
+        width: 400px;
+    }
+
+    .company-name-pics {
         display: flex;
         justify-content: space-around;
         margin-top: 15px;
     }
+    .company-name-pic {
+        width: 165px;
+        margin-right: 5px;
+        @media (min-width: 1220px) {
+            width: 175px;
+            margin-right: 15px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
     .company-name-logo-rectangle {
-        width: 175px;
         height: 111px;
         border-radius: 8px;
         background-color: #efefef;
-        margin-right: 15px;
     }
     .progress-bar {
-        width: 377px;
+        width: 100%;
         height: 16px;
         border-radius: 4px;
         display: flex;
         margin-top: 15px;
-
     }
     .progress-bar-15 {
         width: 15%;
@@ -232,6 +245,7 @@
         letter-spacing: normal;
         text-align: center;
         color: #000000;
+        border-radius: 4px 0 0 4px;
     }
     .progress-bar-85 {
         width: 85%;
@@ -245,6 +259,7 @@
         letter-spacing: normal;
         text-align: center;
         color: #000000;
+        border-radius: 0 4px 4px 0;
     }
     .company-name-heading {
         font-family: OpenSans;
@@ -282,15 +297,14 @@
         color: #000000;
         font-weight: 600;     
     }
-    .company-name-button {
+    .company-name-buttons {
         display: flex;
         margin-top: 30px;
     }
-    .button-decline {
-        width: 183px;
-        height: 80px;
+    .company-name-button {
+        width: 160px;
+        height: 75px;
         border-radius: 8px;
-        background-color: #fd7745;
         font-family: OpenSans;
         font-size: 30px;
         font-weight: 600;
@@ -300,22 +314,16 @@
         letter-spacing: normal;
         text-align: center;
         color: #000000;
+        @media (min-width: 1220px) {
+            width: 183px;
+        }
+    }
+    .button-decline {
+        background-color: #fd7745;
         margin-right: 15px;
     }
     .button-approve {
-        width: 183px;
-        height: 80px;
-        border-radius: 8px;
         background-color: #b7d944;
-        font-family: OpenSans;
-        font-size: 30px;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.37;
-        letter-spacing: normal;
-        text-align: center;
-        color: #000000;
     }
   
 }
