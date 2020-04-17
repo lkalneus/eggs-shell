@@ -1,6 +1,10 @@
-.main {
-    width: calc(100% - 505px);
+.main.main-page {
+    width: calc(100% - 485px);
+    @media (min-width: 1220px) {
+        width: calc(100% - 505px);
+    }
 }
+
 .filters {
     display: flex;
     justify-content: space-around;
@@ -44,7 +48,7 @@
         height: 64px;
         border-top: 1px solid #f5f5f5;
 
-        .td-inspector {
+        .td-inspector, .td-stock {
             width: 92px;
             padding-left: 16px;
             padding-right: 16px;
@@ -57,6 +61,9 @@
             line-height: 1.38;
             letter-spacing: normal;
             color: #000000;
+        }
+        .td-stock-price {
+            min-width:100px;
         }
         .sold {
             color: #c44848;
@@ -138,7 +145,8 @@
         text-align: center;
         color: #000000;
     }
-    .td-inspector.name-inspector {
+    .td-inspector.name-inspector,
+    .td-stock.name-stock {
         min-width: 115px;
         font-family: OpenSans-SemiBold;
         @media (min-width: 1220px) {
@@ -146,10 +154,14 @@
         }
 
         .avatar-img {
-            display: inline-block;
-            margin-right: 12px;
-            vertical-align: middle;
+            display: none;
+            @media (min-width: 1220px){
+                display: inline-block;
+                margin-right: 12px;
+                vertical-align: middle;
+            }
         }
+        
     }
     .type {
         
