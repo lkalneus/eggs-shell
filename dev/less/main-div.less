@@ -47,7 +47,6 @@
     .table-row {
         height: 64px;
         border-top: 1px solid #f5f5f5;
-
         .td-inspector,
         .td-stock,
         .td-farmer {
@@ -63,6 +62,7 @@
             line-height: 1.38;
             letter-spacing: normal;
             color: #000000;
+            vertical-align: middle;
         }
         .td-stock-price {
             min-width:100px;
@@ -73,26 +73,20 @@
         .purchased {
             color: #cc6701;
         }
-        .td-button {
-            width: 92px;
-            height: 28px;
-            font-family: OpenSans;
-            font-size: 16px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.38;
-            letter-spacing: normal;
-            text-align: center;
-            color: #1789fc;
-            border-radius: 8px;
-            border: solid 2px #178df4;
-            background-color: #ffffff;
-        }
-        .td-button-selected {
-            background-color: #1789fc;
-            color: #ffffff;
+    }
+    .table-row-default {
+        &:hover {
+            box-shadow: 0 0 16px 0 rgba(42, 125, 206, 0.16);
+            background-color: #eff9ff;
 
+            .remove-img {
+                background-image: url("../../assets/material-delete-selected.svg");
+            }
+            .button-primary,
+            .button-secondary {
+                background-color: #1789fc;
+                color: #ffffff;
+            }
         }
     }
     .table-row-decline {
@@ -198,14 +192,6 @@
         height: 16px;
         background-image: url("../../assets/material-delete.svg");
         background-repeat: no-repeat;
-    }
-    .selected {
-        box-shadow: 0 0 16px 0 rgba(42, 125, 206, 0.16);
-        background-color: #eff9ff;
-
-        .remove-img {
-            background-image: url("../../assets/material-delete-selected.svg");
-        }
     }
     .table-row-purchased {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
