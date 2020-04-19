@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/main.css">
+    <title>Farmer's Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header header-farmer">
+        <img class="header-logo" src="assets/eggsshell.coml.ogo.svg">
+        <p class="header-text">Stock's Dashboard</p>
+    </header>
+    <div class="page">
+        <div class="menu menu-stocks">
+            <img class="icons-img" src="assets/feather-settings.svg">
+            <img class="icons-img" src="assets/feather-user.svg">
+            <img class="icons-img" src="assets/open-account-logout.svg">
+        </div>
+        <main class="main main-stocks">
+            <div class="filters">
+                <p class="filters-text selected">All</p>
+                <p class="filters-text">New</p>
+                <p class="filters-text selected-blue">Purchased</p>
+                <p class="filters-text">Sold</p>
+            </div>
+            <div class="table-wrapper">
+                <table class="table">
+                <tr class="table-row-heading">
+                    <th class="table-heading">Species <span class="triangle">▼</span></th>
+                    <th class="table-heading table-heading-blue">Color <span class="triangle triangle-blue">▼</span></th>
+                    <th class="table-heading table-heading-bold">Date <span class="triangle triangle-black">▲</span></th>
+                    <th class="table-heading">Weight <span class="triangle">▼</span></th>
+                    <th class="table-heading">Size <span class="triangle">▼</span></th>
+                    <th class="table-heading">Price <span class="triangle">▼</span></th>
+                    <th class="table-heading">Status <span class="triangle">▼</span></th>
+                    <th class="table-heading"></th>    
+                </tr> 
+                    <tr class="table-row">
+                        <td class="td-farmer">Chiken</td>
+                        <td class="td-farmer">Brown</td>
+                        <td class="td-farmer">12.04.20</td>
+                        <td class="td-farmer">75&nbsp;g</td>
+                        <td class="td-farmer">A</td>
+                        <td class="td-farmer td-farmer-price">£10/12st</td>
+                        <td class="td-farmer">New</td>
+                        <td class="td-farmer">
+                            <button class="td-button">
+                                Buy
+                            </button>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </main>
+        <aside class="aside">
+            <div class="personal-data personal-data--fermer">
+                <!-- <h2 class="personal-data-name">Ivarsson&Co Ltd.</h2> -->
+                <p class="personal-data-type">Farmer</p>
+                <div class="personal-data-remove">
+                    <img class="personal-data-remove-img" src="assets/material-edit.svg">
+                    <img class="personal-data-remove-img" src="assets/material-delete-1.svg">
+                </div>
+                <img class="personal-data-logo" src="/assets/logo-example-big.png">
+            </div>
+            <div class="form-wrapper add-eggs">
+                
+            </div>
+        </aside>
+    </div>
+</div>
+</body>
+</html>
