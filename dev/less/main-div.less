@@ -99,7 +99,31 @@
         background-color: #f0ffc9;
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
         border-top: 1px solid #b7d944;
-        border-bottom: 1px solid #b7d944;;
+        border-bottom: 1px solid #b7d944;
+    }
+    .table-row-approved {
+        background-color: #f7ffef;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+        border-bottom: solid 1px #ACCD80;
+        outline: thin solid #ACCD80;
+        &:hover {
+            .button-secondary--approved {
+                background-color: #609300;
+                color: #ffffff;
+            }
+        }
+    }
+    .table-row-declined {
+        background-color: #fff4ed;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+        outline: thin solid #fd7745;
+        border-bottom: 1px solid #fd7745;
+        &:hover {
+            .button-secondary--declined {
+                color: #ffffff;
+                background-color: #d14000;
+            }
+        }
     }
     .table-heading {
         font-family: OpenSans-Light;
