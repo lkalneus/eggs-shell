@@ -64,6 +64,11 @@
             color: #000000;
             vertical-align: middle;
         }
+        .td-farmer--disabled {
+            font-style: italic;
+            font-family: OpenSans-Light;
+            color: #9d9d9d;
+        }
         .td-stock-price {
             min-width:100px;
         }
@@ -74,6 +79,7 @@
             color: #cc6701;
         }
     }
+
     .table-row-default {
         &:hover {
             box-shadow: 0 0 16px 0 rgba(42, 125, 206, 0.16);
@@ -124,6 +130,11 @@
                 background-color: #d14000;
             }
         }
+    }
+    .table-row-waiting {
+        background-color: #eff9ff;
+        border-bottom: 1px solid #8BC6FA;
+        outline: thin solid #8BC6FA;
     }
     .table-heading {
         font-family: OpenSans-Light;
