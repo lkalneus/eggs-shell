@@ -18,7 +18,7 @@
         <p class="header-text">Farmer's Dashboard</p>
     </header>
     <div class="page">
-        <div class="menu">
+        <div class="menu menu-farmer">
             <img class="icons-img" src="assets/feather-settings.svg">
             <img class="icons-img" src="assets/feather-user.svg">
             <img class="icons-img" src="assets/open-account-logout.svg">
@@ -30,7 +30,7 @@
                 <p class="filters-text">Approved</p>
                 <p class="filters-text">Declined</p>
             </div>
-            <div class="table-wrapper">
+            <div class="table-wrapper table-wrapper--farmer">
                 <table class="table">
                 <tr class="table-row-heading">
                     <th class="table-heading">Species <span class="triangle">▼</span></th>
@@ -177,7 +177,7 @@
                 </table>
             </div>
         </main>
-        <aside class="aside">
+        <aside class="aside aside--farmer">
             <div class="personal-data personal-data--fermer">
                 <h2 class="personal-data-name personal-data-name--farmer">Ivarsson&Co Ltd.</h2>
                 
@@ -191,29 +191,63 @@
                 <img class="personal-data-logo" src="/assets/logo-example-big.png">
             </div>
             <div class="form-wrapper add-eggs">
-                <h2 class="new-users-text">New user</h2> 
-                <form class="new-users-form">
-                    
+                <h2 class="heading">Add eggs</h2> 
+                <form class="add-eggs-form">
                     <div class="form-row">
                         <label class="label-name">
-                            <div class="label-text">Type:</div>
+                            <div class="label-text">Species:</div>
                             <!--bootstrap select-->
                             <select class="selectpicker form-select select-type" title="Not select">
-                                <option>Farmer</option>
-                                <option>Not farmer</option>
+                                <option>1</option>
+                                <option>2</option>
                             </select>
                           </label> 
                     </div> 
                     <div class="form-row">
                         <label class="label-name">
-                            <div class="label-text">Location:</div>
+                            <div class="label-text">Color:</div>
                             <!--bootstrap select-->
                             <select class="selectpicker form-select select-location" title="Not select">
-                                <option>Sweden</option>
-                                <option>Finland</option>
+                                <option>White</option>
+                                <option>Black</option>
                             </select>
                           </label> 
-                    </div>                                
+                    </div>
+                    <div class="form-row">
+                        <label class="label-name">
+                            <div class="label-text">Date:</div>
+                            <input class="input input--error" value="jgksdjahsdfhdfkjd" type="text" placeholder="Type a date">
+                         </label>
+                    </div> 
+                    <div class="form-row">
+                        <label class="label-name">
+                            <div class="label-text">Weight(1st):</div>
+                            <!--bootstrap select-->
+                            <select class="selectpicker form-select select-location" title="Not select">
+                                <option>75g</option>
+                                <option>2000g</option>
+                            </select>
+                          </label> 
+                    </div> 
+                    <div class="form-row">
+                        <label class="label-name">
+                            <div class="label-text">Size:</div>
+                            <!--bootstrap select-->
+                            <select class="selectpicker form-select select-location" title="Not select">
+                                <option>A</option>
+                                <option>B</option>
+                            </select>
+                          </label> 
+                    </div> 
+                    <div class="form-row">
+                        <label class="label-name">
+                            <div class="label-text">Price:</div>
+                            <input class="input" type="number" placeholder="Type a price">
+                         </label>
+                    </div> 
+                    <button class="button">
+                        Add new
+                    </button>                              
                 </form> 
             </div>
             

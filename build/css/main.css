@@ -91,6 +91,14 @@
 .menu-stocks {
   margin-top: 85px;
 }
+.menu-farmer {
+  margin-right: 10px;
+}
+@media (min-width: 1220px) {
+  .menu-farmer {
+    margin-right: 40px;
+  }
+}
 .main.main-page {
   width: calc(100% - 485px);
 }
@@ -319,6 +327,11 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff4e3;
 }
+@media (max-width: 1219px) {
+  .table-wrapper--farmer {
+    min-height: 670px;
+  }
+}
 .aside {
   display: flex;
   flex-direction: column;
@@ -451,7 +464,7 @@
   left: 15px;
 }
 .personal-data--fermer {
-  width: 230px;
+  width: 220px;
   padding-left: 10px;
   height: 128px;
 }
@@ -495,7 +508,12 @@
   color: #000000;
 }
 .add-eggs {
-  width: 250px;
+  width: 220px;
+}
+.add-eggs .heading {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0;
 }
 .new-users-form .label-name {
   font-family: OpenSans;
@@ -506,25 +524,6 @@
   line-height: 1.38;
   letter-spacing: normal;
   color: #000000;
-  margin-left: 15px;
-}
-.new-users-form .input-name {
-  width: 272px;
-  height: 32px;
-  border-radius: 8px;
-  background-color: #efefef;
-  font-family: OpenSans-LightItalic;
-  font-size: 18px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: italic;
-  line-height: 1.38;
-  letter-spacing: normal;
-  text-align: left;
-  color: #919191;
-  border: none;
-  box-sizing: border-box;
-  padding-left: 10px;
   margin-left: 15px;
 }
 .new-users-form .form-select {
@@ -727,6 +726,60 @@
 .bootstrap-select > select {
   left: 0!important;
 }
+.add-eggs-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.add-eggs-form .btn {
+  background-color: #efefef !important;
+  border: none!important;
+  font-size: 18px!important;
+  font-family: OpenSans-LightItalic !important;
+  font-style: italic;
+  color: #919191 !important;
+  font-weight: 300!important;
+  border-radius: 8px!important;
+  padding-top: 3.5px;
+  padding-bottom: 3.5px;
+  width: 180px!important;
+}
+.add-eggs-form .form-select {
+  width: 180px!important;
+}
+.add-eggs-form li {
+  font-size: 18px!important;
+}
+.add-eggs-form .caret {
+  border-width: 6px;
+}
+.add-eggs-form .bs-caret {
+  color: black;
+}
+.add-eggs-form .label-text {
+  font-family: OpenSans-Light;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.add-eggs-form .button {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #0aaaff;
+  font-family: OpenSans;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  align-self: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
 .main-stocks {
   width: 100%;
 }
@@ -772,6 +825,31 @@
   border: none;
   background-color: #f5f5f5;
   color: #8d8888;
+}
+.input {
+  height: 32px;
+  border-radius: 8px;
+  background-color: #efefef;
+  font-family: OpenSans-LightItalic;
+  font-size: 18px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #919191;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.input--error {
+  color: #e20a17;
+  background: #ffe6e0;
+}
+.input--name {
+  width: 272px;
+  margin-left: 15px;
 }
 body {
   margin: 0;
