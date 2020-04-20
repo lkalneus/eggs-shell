@@ -358,6 +358,19 @@
   margin-top: 10px;
   margin-bottom: 13px;
 }
+.personal-data .personal-data-name--farmer {
+  font-size: 14px;
+  width: 130px;
+  margin-left: 60px;
+}
+@media (min-width: 1220px) {
+  .personal-data .personal-data-name--farmer {
+    font-size: 24px;
+    width: 199px;
+    align-self: center;
+    margin-left: 0;
+  }
+}
 .personal-data .personal-data-type {
   font-family: OpenSans;
   font-size: 20px;
@@ -369,6 +382,36 @@
   color: #000000;
   margin-bottom: 0;
   margin-top: 0;
+}
+.personal-data .personal-data-type--farmer {
+  font-size: 14px;
+  align-self: center ;
+  margin-left: 10px;
+}
+@media (min-width: 1220px) {
+  .personal-data .personal-data-type--farmer {
+    margin-left: 0;
+    font-size: 20px;
+  }
+}
+.personal-data .pesonal-data-country {
+  font-family: OpenSans;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #000000;
+  margin-left: 5px;
+  margin-bottom: 0;
+  align-self: center;
+}
+@media (min-width: 1220px) {
+  .personal-data .pesonal-data-country {
+    font-size: 16px;
+    margin-left: 10px;
+  }
 }
 .personal-data .personal-data-location {
   width: 187px;
@@ -390,13 +433,35 @@
   justify-content: space-between;
   width: 50px;
 }
+.personal-data .personal-data-remove--farmer {
+  width: 200px;
+  margin-top: 20px;
+}
+@media (min-width: 1220px) {
+  .personal-data .personal-data-remove--farmer {
+    width: 300px;
+  }
+}
+.personal-data .remove-img--farmer {
+  text-align: left;
+}
 .personal-data .personal-data-logo {
   position: absolute;
   top: 15px;
   left: 15px;
 }
 .personal-data--fermer {
-  width: 250px;
+  width: 230px;
+  padding-left: 10px;
+  height: 128px;
+}
+@media (min-width: 1220px) {
+  .personal-data--fermer {
+    width: 400px;
+  }
+}
+.farmer-text-wrapper {
+  display: flex;
 }
 .form-wrapper {
   border-radius: 8px;
@@ -417,7 +482,7 @@
   flex-direction: column;
   box-sizing: border-box;
 }
-.new-users .new-users-text {
+.new-users-text {
   font-family: OpenSans;
   font-size: 24px;
   font-weight: 600;

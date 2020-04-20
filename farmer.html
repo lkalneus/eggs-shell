@@ -15,7 +15,7 @@
 <div class="wrapper">
     <header class="header header-farmer">
         <img class="header-logo" src="assets/eggsshell.coml.ogo.svg">
-        <p class="header-text">Stock's Dashboard</p>
+        <p class="header-text">Farmer's Dashboard</p>
     </header>
     <div class="page">
         <div class="menu">
@@ -179,17 +179,44 @@
         </main>
         <aside class="aside">
             <div class="personal-data personal-data--fermer">
-                <!-- <h2 class="personal-data-name">Ivarsson&Co Ltd.</h2> -->
-                <p class="personal-data-type">Farmer</p>
-                <div class="personal-data-remove">
-                    <img class="personal-data-remove-img" src="assets/material-edit.svg">
-                    <img class="personal-data-remove-img" src="assets/material-delete-1.svg">
+                <h2 class="personal-data-name personal-data-name--farmer">Ivarsson&Co Ltd.</h2>
+                
+                <div class="personal-data-remove personal-data-remove--farmer">
+                    <img class="personal-data-remove-img remove-img--farmer" src="assets/material-edit.svg">
+                    <div class="farmer-text-wrapper">
+                        <p class="personal-data-type personal-data-type--farmer">Farmer</p>
+                        <p class="pesonal-data-country">Sweden, Norrkoping</p>
+                    </div>
                 </div>
                 <img class="personal-data-logo" src="/assets/logo-example-big.png">
             </div>
             <div class="form-wrapper add-eggs">
-                
+                <h2 class="new-users-text">New user</h2> 
+                <form class="new-users-form">
+                    
+                    <div class="form-row">
+                        <label class="label-name">
+                            <div class="label-text">Type:</div>
+                            <!--bootstrap select-->
+                            <select class="selectpicker form-select select-type" title="Not select">
+                                <option>Farmer</option>
+                                <option>Not farmer</option>
+                            </select>
+                          </label> 
+                    </div> 
+                    <div class="form-row">
+                        <label class="label-name">
+                            <div class="label-text">Location:</div>
+                            <!--bootstrap select-->
+                            <select class="selectpicker form-select select-location" title="Not select">
+                                <option>Sweden</option>
+                                <option>Finland</option>
+                            </select>
+                          </label> 
+                    </div>                                
+                </form> 
             </div>
+            
         </aside>
     </div>
 </div>
