@@ -327,9 +327,12 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff4e3;
 }
-@media (max-width: 1219px) {
+.table-wrapper--farmer {
+  min-height: 670px;
+}
+@media (min-width: 1220px) {
   .table-wrapper--farmer {
-    min-height: 670px;
+    min-height: 650px;
   }
 }
 .aside {
@@ -470,7 +473,7 @@
 }
 @media (min-width: 1220px) {
   .personal-data--fermer {
-    width: 400px;
+    width: 360px;
   }
 }
 .farmer-text-wrapper {
@@ -510,10 +513,21 @@
 .add-eggs {
   width: 220px;
 }
+@media (min-width: 1220px) {
+  .add-eggs {
+    width: 360px;
+  }
+}
 .add-eggs .heading {
   font-size: 20px;
   text-align: center;
   margin-bottom: 0;
+}
+@media (min-width: 1220px) {
+  .add-eggs .heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 }
 .new-users-form .label-name {
   font-family: OpenSans;
@@ -733,6 +747,17 @@
   padding: 5px;
   box-sizing: border-box;
 }
+@media (min-width: 1220px) {
+  .add-eggs-form {
+    align-items: flex-end;
+    padding: 15px;
+  }
+}
+@media (min-width: 1220px) {
+  .add-eggs-form .form-row {
+    margin-bottom: 10px;
+  }
+}
 .add-eggs-form .btn {
   background-color: #efefef !important;
   border: none!important;
@@ -746,8 +771,18 @@
   padding-bottom: 3.5px;
   width: 180px!important;
 }
+@media (min-width: 1220px) {
+  .add-eggs-form .btn {
+    width: 220px!important;
+  }
+}
 .add-eggs-form .form-select {
   width: 180px!important;
+}
+@media (min-width: 1220px) {
+  .add-eggs-form .form-select {
+    width: 220px!important;
+  }
 }
 .add-eggs-form li {
   font-size: 18px!important;
@@ -762,6 +797,14 @@
   font-family: OpenSans-Light;
   font-size: 14px;
   margin-top: 10px;
+}
+@media (min-width: 1220px) {
+  .add-eggs-form .label-text {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 15px;
+    margin-top: 0;
+  }
 }
 .add-eggs-form .button {
   width: 100%;
@@ -779,6 +822,14 @@
   align-self: center;
   margin-top: 25px;
   margin-bottom: 15px;
+  box-sizing: border-box;
+}
+@media (min-width: 1220px) {
+  .add-eggs-form .button {
+    width: 326px;
+    height: 80px;
+    font-size: 30px;
+  }
 }
 .main-stocks {
   width: 100%;
@@ -850,6 +901,11 @@
 .input--name {
   width: 272px;
   margin-left: 15px;
+}
+@media (min-width: 1220px) {
+  .input--farmer {
+    width: 220px;
+  }
 }
 body {
   margin: 0;
