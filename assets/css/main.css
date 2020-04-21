@@ -30,10 +30,9 @@
   border-right: 1px solid #d5d5d5;
 }
 .header .header-text {
-  width: 308px;
-  height: 40px;
+  margin-top:10px;
   font-family: OpenSans;
-  font-size: 29px;
+  font-size: 25px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
