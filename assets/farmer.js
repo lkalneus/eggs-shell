@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const eggs = $("#eggs > tbody");
   const filters = $("#filters");
-  const personalData = $("#personal-data");
+  const addEgg = $("#add-egg");
 
   function formatDate(date) {
     const d = new Date(date);
@@ -13,6 +13,7 @@ $(document).ready(function () {
   }
 
   function listEgg(egg) {
+    console.log({egg})
     let button, status;
     switch (egg.status) {
       case "produced":
@@ -63,5 +64,13 @@ $(document).ready(function () {
         eggs.children().show();
       }
     });
+  addEgg.click(() => {
+    const type = $('#species').val()
+    const col = $('#color').val()
+    const amount = $('#amount').val()
+    console.log({type,col,amount})
+
+  })
+
   });
 });

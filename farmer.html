@@ -64,19 +64,16 @@
         </main>
         <aside class="aside aside--farmer">
           <div class="form-wrapper add-eggs">
-            <h4 class="heading">Add eggs</h4>
-            <form class="add-eggs-form">
               <div class="form-row">
                 <label class="label-name">
                   <div class="label-text">Species:</div>
                   <!--bootstrap select-->
                   <select
                     class="selectpicker form-select select-type"
-                    title="Not select"
-                    name=""
+                    id="species"
                   >
-                  <option>Chicken</option>
-                  <option>Duck</option>
+                    <option selected>Chicken</option>
+                    <option>Duck</option>
                     <option>Emu</option>
                     <option>Ostrich</option>
                   </select>
@@ -88,64 +85,29 @@
                   <!--bootstrap select-->
                   <select
                     class="selectpicker form-select select-location"
-                    title="Not select"
+                    id="color"
                   >
-                    <option>White</option>
-                    <option>Black</option>
+                    <option selected>White</option> 
+                    <option>Yellow</option>
+                    <option>Brown</option>
+                    <option>Blue</option>
                   </select>
                 </label>
               </div>
               <div class="form-row">
                 <label class="label-name">
-                  <div class="label-text">Date:</div>
-                  <input
-                    class="input input--farmer input--error"
-                    value="jgksdjahsdfhdfkjd"
-                    type="text"
-                    placeholder="Type a date"
-                  />
-                </label>
-              </div>
-              <div class="form-row">
-                <label class="label-name">
-                  <div class="label-text">Weight(1st):</div>
-                  <!--bootstrap select-->
-                  <select
-                    class="selectpicker form-select select-location"
-                    title="Not select"
-                  >
-                    <option>75g</option>
-                    <option>2000g</option>
-                  </select>
-                </label>
-              </div>
-              <div class="form-row">
-                <label class="label-name">
-                  <div class="label-text">Size:</div>
-                  <!--bootstrap select-->
-                  <select
-                    class="selectpicker form-select select-location"
-                    title="Not select"
-                  >
-                    <option>A</option>
-                    <option>B</option>
-                  </select>
-                </label>
-              </div>
-              <div class="form-row">
-                <label class="label-name">
-                  <div class="label-text">Price:</div>
+                  <div class="label-text">Amount</div>
                   <input
                     class="input input--farmer"
                     type="number"
-                    placeholder="Type a price"
+                    id="amount"
+                    value="12"
                   />
                 </label>
               </div>
-              <button class="button">
-                Add new
+              <button class="button" id="add-egg">
+                Add eggs
               </button>
-            </form>
           </div>
         </aside>
       </div>
