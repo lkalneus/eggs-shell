@@ -5,7 +5,7 @@ $(document).ready(function () {
   function viewParty(party) {
     personalData.children(".personal-data-name").text(party.Name);
     personalData.children(".personal-data-type").text(party.Type);
-    personalData.children(".personal-data-country").text(party.Children);
+    personalData.children(".personal-data-location").text(party.Country);
   }
 
   function addParty(party) {
