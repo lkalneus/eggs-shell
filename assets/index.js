@@ -2,11 +2,15 @@ $(document).ready(function () {
   const farmers = $("#farmers > tbody");
   const filters = $("#filters");
   const personalData = $("#personal-data");
-
+  const farmLink = $("#to-farm");
+  farmLink.hide();
   function viewParty(party) {
     personalData.children(".personal-data-name").text(party.Name);
     personalData.children(".personal-data-type").text(party.Type);
     personalData.children(".personal-data-location").text(party.Country);
+    if (party.Type === "farm") {
+      farmLink.show();
+    }
   }
 
   function addParty(party) {

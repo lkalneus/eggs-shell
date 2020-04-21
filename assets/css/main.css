@@ -337,6 +337,7 @@
   position: relative;
 }
 .personal-data .personal-data-name {
+  text-transform: capitalize;
   font-family: OpenSans-SemiBold;
   font-size: 24px;
   font-weight: 600;
@@ -352,6 +353,8 @@
   margin-bottom: 13px;
 }
 .personal-data .personal-data-type {
+
+  text-transform: capitalize;
   font-family: OpenSans;
   font-size: 20px;
   font-weight: normal;
@@ -364,6 +367,8 @@
   margin-top: 0;
 }
 .personal-data .personal-data-location {
+
+  text-transform: capitalize;
   width: 187px;
   height: 33px;
   font-family: OpenSans-Light;
