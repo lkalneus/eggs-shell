@@ -50,7 +50,7 @@ $(document).ready(function () {
       <td class="td-farmer">${egg.weight}g</td>
       <td class="td-farmer">${egg.size}</td>
       <td class="td-farmer td-farmer-price">${
-        egg.price && `£${egg.price}
+        egg.price && `£${egg.price}`
       }</td>
       <td class="td-farmer">${status}</td>
       <td class="td-farmer">${button || ""}
