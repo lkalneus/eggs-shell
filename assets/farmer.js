@@ -63,12 +63,13 @@ $(document).ready(function () {
         eggs.children().show();
       }
     });
-  addEgg.click(() => {
-    const type = $('#species').val()
-    const col = $('#color').val()
-    const amount = $('#amount').val()
-    produceEggs(type, col, amount).then(()=>{location.reload();})
-  })
-
+    addEgg.click(() => {
+      const type = $("#species").val();
+      const col = $("#color").val();
+      const amount = $("#amount").val();
+      produceEggs(type, col, amount).then(() => {
+        location.reload();
+      });
+    });
   });
 });

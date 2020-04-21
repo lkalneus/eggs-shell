@@ -136,6 +136,7 @@
 .table .table-row .td-inspector,
 .table .table-row .td-stock,
 .table .table-row .td-farmer {
+  text-transform:capitalize;
   width: 92px;
   padding-left: 16px;
   padding-right: 16px;
