@@ -423,7 +423,10 @@
   color: #000000;
 }
 .add-eggs {
-  width: 250px;
+  padding:1em;
+}
+.input--farmer {
+  width: 100%;
 }
 .new-users-form .label-name {
   font-family: OpenSans;
