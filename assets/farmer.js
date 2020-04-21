@@ -1,3 +1,10 @@
+function sellEgg(id) {
+  const price = prompt("Price per dozen?", 1.7);
+  sellEggs(id, price).then(() => {
+    location.reload();
+  });
+}
+
 $(document).ready(function () {
   const eggs = $("#eggs > tbody");
   const filters = $("#filters");
@@ -29,7 +36,7 @@ $(document).ready(function () {
         break;
       case "Certified":
         status = "certified";
-        button = `<button class="button-secondary" onclick="sellEggs('${egg.id}','${egg.price}')">Mkt</button>`;
+        button = `<button class="button-secondary" onclick="sellEgg('${egg.id}')">Mkt</button>`;
         break;
     }
 
