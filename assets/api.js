@@ -74,7 +74,7 @@ function produceEggs(type, color, amount) {
     redirect: 'follow'
     };
 
-    fetch(`/api/farm/produceEggs?type=${type}&color=${color}&amount=${amount}`, requestOptions)
+    return fetch(`/api/farm/produceEggs?type=${type}&color=${color}&amount=${amount}`, requestOptions)
     .then(function (response) {
         return response.json();
     })
@@ -95,7 +95,7 @@ function inspectEggs(id,inspector, farm) {
         redirect: 'follow'
       };
       
-      fetch(`/api/${farm}/inspect?id=${id}&inspector=${inspector}`, requestOptions)
+      return fetch(`/api/${farm}/inspect?id=${id}&inspector=${inspector}`, requestOptions)
         .then(function (response) {
             return response.json();
         })
@@ -112,7 +112,7 @@ function certifyEggs(id, party) {
         redirect: 'follow'
       };
       
-      fetch(`/api/${party}/certify?id=${id}`, requestOptions)
+      return fetch(`/api/${party}/certify?id=${id}`, requestOptions)
         .then(function (response) {
             return response.json();
         })
@@ -129,7 +129,7 @@ function sellEggs(id, price, party) {
         redirect: 'follow'
       };
       
-      fetch(`/api/${party}/sell?id=${id}&price=${price}`, requestOptions)
+      return fetch(`/api/${party}/sell?id=${id}&price=${price}`, requestOptions)
         .then(function (response) {
             return response.json();
         })
@@ -146,7 +146,7 @@ function getEggsTokens(party) {
         redirect: 'follow'
       };
       
-      fetch(`/api/${party}/getEggsToken`, requestOptions)
+      return fetch(`/api/${party}/getEggsToken`, requestOptions)
         .then(function (response) {
             return response.json();
         })
@@ -166,7 +166,7 @@ function giveSomeCash(party, amount) {
         redirect: 'follow'
       };
       
-      fetch(`/api/${party}/getCash?amount=${amount}`, requestOptions)
+      return fetch(`/api/${party}/getCash?amount=${amount}`, requestOptions)
         .then(function (response) {
             return response.json();
         })
@@ -189,7 +189,7 @@ function buyEggs(id, amount, seller, party) {
         redirect: 'follow'
       };
       
-      fetch(`/api/${party}/deal?id=${id}&seller=${seller}&amount=${amount}`, requestOptions)
+      return fetch(`/api/${party}/deal?id=${id}&seller=${seller}&amount=${amount}`, requestOptions)
         .then(function (response) {
             return response.json();
         })
