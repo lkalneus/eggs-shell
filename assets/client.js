@@ -1,17 +1,29 @@
 $(document).ready(function () {
   const farmers = $("#farmers > tbody");
+  const personalData = $("#personal-data");
 
-  getParties().then((parties) => {
-    parties.forEach((p) => {
-      farmers.append(`
+  function viewParty(party) {
+    personalData.children(".personal-data-name").text(party.Name);
+    personalData.children(".personal-data-type").text(party.Type);
+    personalData.children(".personal-data-country").text(party.Children);
+  }
+
+  function addParty(party) {
+    farmers.append(`
             <tr class="table-row table-row-default">
-                <td class="name">${p.Name}</td>
-                <td class="type">${p.Type}</td>
-                <td class="location">${p.Country}</td>
+                <td class="name">${party.Name}</td>
+                <td class="type">${party.Type}</td>
+                <td class="location">${party.Country}</td>
                 <td class="remove">
                     <div class="remove-img"></div>
                 </td>
             </tr>`);
+    $("#farmers > tbody > tr:last").click(function () {
+      viewParty(party);
     });
+  }
+
+  getParties().then((parties) => {
+    parties.map(addParty);
   });
 });
