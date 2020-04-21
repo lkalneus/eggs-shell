@@ -1,5 +1,6 @@
 $(document).ready(function () {
   const farmers = $("#farmers > tbody");
+  const filters = $("#farm-filters");
   const personalData = $("#personal-data");
 
   function viewParty(party) {
@@ -10,13 +11,10 @@ $(document).ready(function () {
 
   function addParty(party) {
     farmers.append(`
-            <tr class="table-row table-row-default">
+            <tr class="table-row table-row-default" data-type="${party.Type}">
                 <td class="name">${party.Name}</td>
                 <td class="type">${party.Type}</td>
                 <td class="location">${party.Country}</td>
-                <td class="remove">
-                    <div class="remove-img"></div>
-                </td>
             </tr>`);
     $("#farmers > tbody > tr:last").click(function () {
       viewParty(party);
@@ -25,5 +23,14 @@ $(document).ready(function () {
 
   getParties().then((parties) => {
     parties.map(addParty);
+    filters.on("click", "> *", function () {
+      const dataType = $(this).attr("data-type");
+      if (dataType !== "all") {
+        farmers.children().hide();
+        farmers.children(`[data-type="${$(this).attr("data-type")}"]`).show();
+      } else {
+        farmers.children().show();
+      }
+    });
   });
 });
