@@ -29,7 +29,7 @@ $(document).ready(function () {
         break;
       case "Certified":
         status = "certified";
-        button = `<button class="button-secondary" onclick="sellEggs('${egg.id}','${egg.price}').then(()=>{location.reload();})">Mkt</button>`;
+        button = `<button class="button-secondary" onclick="sellEggs('${egg.id}','${egg.price}')">Mkt</button>`;
         break;
     }
 
