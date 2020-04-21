@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const farmers = $("#farmers > tbody");
-  const filters = $("#farm-filters");
+  const filters = $("#filters");
   const personalData = $("#personal-data");
 
   function viewParty(party) {

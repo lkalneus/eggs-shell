@@ -58,7 +58,6 @@
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
-  max-width: 1300px;
   margin: 0 auto;
 }
 @media (min-width: 1220px) {
@@ -91,13 +90,9 @@
   margin-top: 85px;
 }
 .main.main-page {
-  width: calc(100% - 485px);
+  width: 100%;
 }
-@media (min-width: 1220px) {
-  .main.main-page {
-    width: calc(100% - 505px);
-  }
-}
+
 .filters {
   display: flex;
   justify-content: space-around;

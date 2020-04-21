@@ -1,258 +1,151 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="build/css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <title>Farmer's Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
-</head>
-<body>
-<div class="wrapper">
-    <header class="header header-farmer">
-        <img class="header-logo" src="assets/eggsshell.coml.ogo.svg">
+    <script src="assets/api.js" type="text/javascript"></script>
+    <script src="assets/farmer.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header header-farmer">
+        <img class="header-logo" src="assets/eggsshell.coml.ogo.svg" />
         <p class="header-text">Farmer's Dashboard</p>
-    </header>
-    <div class="page">
-        <div class="menu menu-farmer">
-            <img class="icons-img" src="assets/feather-settings.svg">
-            <img class="icons-img" src="assets/feather-user.svg">
-            <img class="icons-img" src="assets/open-account-logout.svg">
-        </div>
+      </header>
+      <div class="page">
         <main class="main">
-            <div class="filters">
-                <p class="filters-text selected">All</p>
-                <p class="filters-text">To approve</p>
-                <p class="filters-text">Approved</p>
-                <p class="filters-text">Declined</p>
-            </div>
-            <div class="table-wrapper table-wrapper--farmer">
-                <table class="table">
+          <div class="filters" id="filters">
+            <a class="filters-text selected" data-type="all">All</a>
+            <a class="filters-text" data-type="produced">New</a>
+            <a class="filters-text" data-type="On inspection">Inspecting</a>
+            <a class="filters-text" data-type="Certified">Certified</a>
+            <a class="filters-text" data-type="OnSale">On sale</a>
+          </div>
+          <div class="table-wrapper table-wrapper--farmer">
+            <table class="table" id="eggs">
+              <thead>
                 <tr class="table-row-heading">
-                    <th class="table-heading">Species <span class="triangle">▼</span></th>
-                    <th class="table-heading table-heading-blue">Color <span class="triangle triangle-blue">▼</span></th>
-                    <th class="table-heading table-heading-bold">Date <span class="triangle triangle-black">▲</span></th>
-                    <th class="table-heading">Weight <span class="triangle">▼</span></th>
-                    <th class="table-heading">Size <span class="triangle">▼</span></th>
-                    <th class="table-heading">Price <span class="triangle">▼</span></th>
-                    <th class="table-heading">Status <span class="triangle">▼</span></th>
-                    <th class="table-heading"></th>    
-                </tr> 
-                    <tr class="table-row table-row-default">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">New</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary">
-                                Send
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="table-row table-row-approved">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">Approved</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary button-secondary--approved">
-                                To stock
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="table-row table-row-declined">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">Declined</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary button-secondary--declined">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="table-row table-row-waiting">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">Waiting...</td>
-                        <td class="td-farmer"></td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer td-farmer--disabled">Unknown</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary  button--disabled">
-                                Send
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="table-row table-row-default">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">New</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary">
-                                Send
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="table-row table-row-approved">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">Approved</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary button-secondary--approved">
-                                To stock
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="table-row table-row-declined">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">Declined</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary button-secondary--declined">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="table-row table-row-waiting">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer">Waiting...</td>
-                        <td class="td-farmer"></td>
-                    </tr>
-                    <tr class="table-row">
-                        <td class="td-farmer">Chiken</td>
-                        <td class="td-farmer">Brown</td>
-                        <td class="td-farmer">12.04.20</td>
-                        <td class="td-farmer">75&nbsp;g</td>
-                        <td class="td-farmer">A</td>
-                        <td class="td-farmer td-farmer-price">£10/12st</td>
-                        <td class="td-farmer td-farmer--disabled">Unknown</td>
-                        <td class="td-farmer">
-                            <button class="button-secondary  button--disabled">
-                                Send
-                            </button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                  <th class="table-heading">Species</th>
+                  <th class="table-heading">Color</th>
+                  <th class="table-heading">Date</th>
+                  <th class="table-heading">Weight</th>
+                  <th class="table-heading">Size</th>
+                  <th class="table-heading">Price</th>
+                  <th class="table-heading">Status</th>
+                  <th class="table-heading"></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </main>
         <aside class="aside aside--farmer">
-            <div class="personal-data personal-data--fermer">
-                <h2 class="personal-data-name personal-data-name--farmer">Ivarsson&Co Ltd.</h2>
-                
-                <div class="personal-data-remove personal-data-remove--farmer">
-                    <img class="personal-data-remove-img remove-img--farmer" src="assets/material-edit.svg">
-                    <div class="farmer-text-wrapper">
-                        <p class="personal-data-type personal-data-type--farmer">Farmer</p>
-                        <p class="pesonal-data-country">Sweden, Norrkoping</p>
-                    </div>
-                </div>
-                <img class="personal-data-logo" src="/assets/logo-example-big.png">
-            </div>
-            <div class="form-wrapper add-eggs">
-                <h2 class="heading">Add eggs</h2> 
-                <form class="add-eggs-form">
-                    <div class="form-row">
-                        <label class="label-name">
-                            <div class="label-text">Species:</div>
-                            <!--bootstrap select-->
-                            <select class="selectpicker form-select select-type" title="Not select">
-                                <option>1</option>
-                                <option>2</option>
-                            </select>
-                          </label> 
-                    </div> 
-                    <div class="form-row">
-                        <label class="label-name">
-                            <div class="label-text">Color:</div>
-                            <!--bootstrap select-->
-                            <select class="selectpicker form-select select-location" title="Not select">
-                                <option>White</option>
-                                <option>Black</option>
-                            </select>
-                          </label> 
-                    </div>
-                    <div class="form-row">
-                        <label class="label-name">
-                            <div class="label-text">Date:</div>
-                            <input class="input input--farmer input--error" value="jgksdjahsdfhdfkjd" type="text" placeholder="Type a date">
-                         </label>
-                    </div> 
-                    <div class="form-row">
-                        <label class="label-name">
-                            <div class="label-text">Weight(1st):</div>
-                            <!--bootstrap select-->
-                            <select class="selectpicker form-select select-location" title="Not select">
-                                <option>75g</option>
-                                <option>2000g</option>
-                            </select>
-                          </label> 
-                    </div> 
-                    <div class="form-row">
-                        <label class="label-name">
-                            <div class="label-text">Size:</div>
-                            <!--bootstrap select-->
-                            <select class="selectpicker form-select select-location" title="Not select">
-                                <option>A</option>
-                                <option>B</option>
-                            </select>
-                          </label> 
-                    </div> 
-                    <div class="form-row">
-                        <label class="label-name">
-                            <div class="label-text">Price:</div>
-                            <input class="input input--farmer" type="number" placeholder="Type a price">
-                         </label>
-                    </div> 
-                    <button class="button">
-                        Add new
-                    </button>                              
-                </form> 
-            </div>
-            
+          <div class="form-wrapper add-eggs">
+            <h2 class="heading">Add eggs</h2>
+            <form class="add-eggs-form">
+              <div class="form-row">
+                <label class="label-name">
+                  <div class="label-text">Species:</div>
+                  <!--bootstrap select-->
+                  <select
+                    class="selectpicker form-select select-type"
+                    title="Not select"
+                  >
+                    <option>1</option>
+                    <option>2</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-row">
+                <label class="label-name">
+                  <div class="label-text">Color:</div>
+                  <!--bootstrap select-->
+                  <select
+                    class="selectpicker form-select select-location"
+                    title="Not select"
+                  >
+                    <option>White</option>
+                    <option>Black</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-row">
+                <label class="label-name">
+                  <div class="label-text">Date:</div>
+                  <input
+                    class="input input--farmer input--error"
+                    value="jgksdjahsdfhdfkjd"
+                    type="text"
+                    placeholder="Type a date"
+                  />
+                </label>
+              </div>
+              <div class="form-row">
+                <label class="label-name">
+                  <div class="label-text">Weight(1st):</div>
+                  <!--bootstrap select-->
+                  <select
+                    class="selectpicker form-select select-location"
+                    title="Not select"
+                  >
+                    <option>75g</option>
+                    <option>2000g</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-row">
+                <label class="label-name">
+                  <div class="label-text">Size:</div>
+                  <!--bootstrap select-->
+                  <select
+                    class="selectpicker form-select select-location"
+                    title="Not select"
+                  >
+                    <option>A</option>
+                    <option>B</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-row">
+                <label class="label-name">
+                  <div class="label-text">Price:</div>
+                  <input
+                    class="input input--farmer"
+                    type="number"
+                    placeholder="Type a price"
+                  />
+                </label>
+              </div>
+              <button class="button">
+                Add new
+              </button>
+            </form>
+          </div>
         </aside>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
