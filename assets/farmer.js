@@ -13,7 +13,6 @@ $(document).ready(function () {
   }
 
   function listEgg(egg) {
-    console.log({egg})
     let button, status;
     switch (egg.status) {
       case "produced":
@@ -68,8 +67,7 @@ $(document).ready(function () {
     const type = $('#species').val()
     const col = $('#color').val()
     const amount = $('#amount').val()
-    console.log({type,col,amount})
-
+    produceEggs(type, col, amount).then(()=>{location.reload();})
   })
 
   });
