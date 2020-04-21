@@ -17,7 +17,7 @@ $(document).ready(function () {
     switch (egg.status) {
       case "produced":
         status = "new";
-        button = `<button class="button-secondary" onclick="inspectEggs('${egg.id}')">Insp</button>`;
+        button = `<button class="button-secondary" onclick="inspectEggs('${egg.id}').then(()=>{location.reload();})">Insp</button>`;
         break;
       case "OnSale":
         status = "on sale";
@@ -29,7 +29,7 @@ $(document).ready(function () {
         break;
       case "Certified":
         status = "certified";
-        button = `<button class="button-secondary" onclick="sellEggs('${egg.id}', '${egg.price})">To market</button>`;
+        button = `<button class="button-secondary" onclick="sellEggs('${egg.id}', '${egg.price}).then(()=>{location.reload();})">To market</button>`;
         break;
     }
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
     farmEggs.map(listEgg);
     filters.on("click", "> *", function () {
       const dataType = $(this).attr("data-type");
-      console.log(dataType)
+      console.log(dataType);
       if (dataType !== "all") {
         eggs.children().hide();
         eggs.children(`[data-type="${$(this).attr("data-type")}"]`).show();
