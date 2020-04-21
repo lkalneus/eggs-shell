@@ -1,5 +1,5 @@
 function sellEgg(id) {
-  const price = prompt("Price per dozen?", 1.7);
+  const price = prompt("Price per unit (£)?", 0.2);
   sellEggs(id, price).then(() => {
     location.reload();
   });
@@ -50,7 +50,7 @@ $(document).ready(function () {
       <td class="td-farmer">${egg.weight}g</td>
       <td class="td-farmer">${egg.size}</td>
       <td class="td-farmer td-farmer-price">${
-        egg.price && `£${egg.price}/dz`
+        egg.price && `£${egg.price}
       }</td>
       <td class="td-farmer">${status}</td>
       <td class="td-farmer">${button || ""}
